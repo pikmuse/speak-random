@@ -7,22 +7,49 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<header>
-			<h1 id="app-title">Random Word Generator</h1>
-		</header>
-
 		<main>
 			<section class="display">
 				<div id="word" class="word-display">—</div>
-				<div id="timer" class="timer">60</div>
+				<div class="timer-container hidden">
+
+  <svg class="progress-ring" width="200" height="200">
+    <circle
+      class="progress-ring__circle"
+      stroke="purple"
+      stroke-width="8"
+      fill="transparent"
+      r="80"
+      cx="100"
+      cy="100"
+    />
+  </svg>
+
+  <div class="timer-text">60</div>
+
+</div>
 			</section>
 
 			<div class="controls">
-				<button id="generate-btn" type="button">Generate Word</button>
-			</div>
+  <button id="generate-btn">Spin</button>
+</div>
+
+<div class="timer-container hidden">
+	<svg class="progress-ring" width="200" height="200" viewBox="0 0 200 200" aria-hidden="true">
+		<defs>
+			<linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+				<stop offset="0%" stop-color="#00b3ff" />
+				<stop offset="60%" stop-color="#7a2cff" />
+				<stop offset="100%" stop-color="#c400ff" />
+			</linearGradient>
+		</defs>
+		<circle class="progress-ring__bg" stroke="#f1f4f9" stroke-width="10" fill="transparent" r="90" cx="100" cy="100" />
+		<circle class="progress-ring__circle" stroke="url(#ringGradient)" stroke-width="10" fill="transparent" r="90" cx="100" cy="100" stroke-linecap="round" />
+	</svg>
+  <div class="timer-text">60</div>
+</div>
 		</main>
 
-		<script src="script.js"></script>
+		<script src="script.js?v=2"></script>
 	</body>
 </html>
 
