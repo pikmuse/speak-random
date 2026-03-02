@@ -77,6 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		// Reveal timer and start countdown
 		timerContainer.classList.remove('hidden');
+        timerContainer.classList.add('fade-in');
 
 		// Reset ring and start countdown from 60
 		ring.style.transition = 'stroke-dashoffset 1s linear';
